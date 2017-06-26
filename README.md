@@ -33,22 +33,22 @@ processor.normalize("형태소 분석을 합니닼ㅋㅋㅋㅋㅋㅋ")
 # => "형태소 분석을 합니다ㅋㅋㅋㅋㅋㅋ"
 
 # Tokenize
-proccessor.tokenize("한국어를 처리하는 예시입니다 ㅋㅋ")
+processor.tokenize("한국어를 처리하는 예시입니다 ㅋㅋ")
 # => ["한국어", "를", " ", "처리", "하는", " ", "예시", "입니", "다", " ", "ㅋㅋ"]
 
 # Stemming
-proccessor.stem("한국어를 처리하는 예시입니다 ㅋㅋ")
+processor.stem("한국어를 처리하는 예시입니다 ㅋㅋ")
 # => ["한국어", "를", " ", "처리", "하다", " ", "예시", "이다", " ", "ㅋㅋ"]
 
 # extract phrases
-proccessor.stem("한국어를 처리하는 예시입니다 ㅋㅋ")
+processor.stem("한국어를 처리하는 예시입니다 ㅋㅋ")
 # => ["한국어", "처리", "처리하는 예시", "예시"]
 ```
 #### Token Information
 토큰 클래스(`TwitterKorean::KoreanToken`)는 String을 상속받아 만들었습니다. 토큰에 대한 메타정보는 `metadata` attribute를 사용합니다.
 
 ```{ruby}
-tokens = proccessor.tokenize("한국어를 처리하는 예시입니다 ㅋㅋ")
+tokens = processor.tokenize("한국어를 처리하는 예시입니다 ㅋㅋ")
 token = tokens.first
 
 token #=> 한국어

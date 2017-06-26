@@ -12,7 +12,7 @@ module TwitterKorean
 
     def normalize(text)
       return unless text
-      jvm_processor.normalize(text).toString
+      jvm_processor.normalize(text).to_s
     end
 
     def tokenize(text)
@@ -41,7 +41,7 @@ module TwitterKorean
     private
 
     def converto_to_korean_tokens &block
-      scala_list = block.call.toString
+      scala_list = block.call.to_s
       token_strs = scala_list_to_array(scala_list)
       token_strs.map do |formed_token_str|
         TwitterKorean::KoreanToken.build_by_formed_str(formed_token_str.first)

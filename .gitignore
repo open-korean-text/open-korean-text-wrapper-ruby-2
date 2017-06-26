@@ -10,3 +10,6 @@
 /.byebug_history
 coverage
 /*.gem
+
+# Ignore RubyMine setting files
+.idea/
